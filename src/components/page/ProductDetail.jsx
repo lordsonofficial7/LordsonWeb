@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getProducts } from "../../js/api";
 import { addToCart } from "../../js/cartUtils";
 import BestSeller from "../BestSeller";
+import SizeChert from "../../assets/size.jpg";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -180,8 +181,12 @@ const ProductDetail = () => {
           </button>
 
           <div className="pt-4 border-t mt-4 text-sm text-gray-600">
-            <p>✔ 7 Days easy exchange & return</p>
-            <p>✔ Inclusive of all taxes</p>
+            <img
+              src={SizeChert}
+              alt={product.title}
+              className="w-full max-h-[300px] object-contain rounded-2xl shadow"
+            />
+          
           </div>
         </div>
       </div>

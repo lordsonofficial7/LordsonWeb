@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import ProductDetail from "./components/page/ProductDetail";
 import CartPage from "./components/page/CartPage";
 import CheckoutPage from "./components/page/CheckoutPage";
+import EvenBanner from "./components/EvenBanner";
+import ShippingExchange from "./components/ShippingExchange";
 
 function App() {
   return (
@@ -22,9 +24,9 @@ function App() {
             <>
               <Hero />
               <NewArrivals />
+              <EvenBanner />
               <TshirtSection />
               <SweatshirtSection />
-              <Footer />
             </>
           }
         />
@@ -33,9 +35,12 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/shipping-exchange" element={<ShippingExchange />} />
 
 
       </Routes>
+              <Footer />
+
     </Router>
   );
 }
