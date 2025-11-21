@@ -69,14 +69,7 @@ console.log(banner);
             {banner.description}
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="px-6 py-2 font-semibold text-white bg-black rounded-md hover:bg-gray-800 transition-transform hover:scale-105">
-              Join Now
-            </button>
-            <button className="px-6 py-2 font-semibold text-black bg-white rounded-md hover:bg-gray-100 transition-transform hover:scale-105">
-              More Info
-            </button>
-          </div>
+         
         </div>
 
         {/* Right: Foreground Image */}

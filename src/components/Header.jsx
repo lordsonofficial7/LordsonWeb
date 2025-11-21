@@ -39,7 +39,7 @@
 
 
 
-import { Menu, ShoppingBag } from "lucide-react";
+import { Menu, ShoppingBag, Home } from "lucide-react";
 import { Link } from "react-router-dom"; // ✅ import Link
 import Logo from "../assets/LOGO.png"; // make sure this path is correct
 
@@ -52,14 +52,14 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 text-xl font-medium text-gray-700">
             <Link to="/" className="hover:text-orange-600 transition">
-              Best Seller
+              <Home className="w-6 h-6" />
             </Link>
-            <Link to="/category/tshirt" className="hover:text-orange-600 transition">
+            {/* <Link to="/category/tshirt" className="hover:text-orange-600 transition">
               T-Shirt
             </Link>
             <Link to="/category/sweatshirt" className="hover:text-orange-600 transition">
               Sweatshirt
-            </Link>
+            </Link> */}
           </nav>
         </div>
 
