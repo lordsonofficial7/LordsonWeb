@@ -1,10 +1,10 @@
- import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getCart, clearCart } from "../../js/cartUtils";
 import { useNavigate } from "react-router-dom";
 import {
   placeCODOrder,
-  createRazorpayOrder,
-  verifyRazorpayPayment,
+  // createRazorpayOrder,
+  // verifyRazorpayPayment,
 } from "../../js/api";
 
 export default function CheckoutPage() {
@@ -247,7 +247,7 @@ export default function CheckoutPage() {
                 Cash on Delivery
               </label>
 
-              <label className="flex items-center gap-2">
+              {/* <label className="flex items-center gap-2">
                 <input
                   type="radio"
                   name="paymentMethod"
@@ -256,7 +256,18 @@ export default function CheckoutPage() {
                   onChange={handleChange}
                 />
                 Pay Online (Razorpay)
+              </label> */}
+
+              <label className="flex items-center gap-2 opacity-50 cursor-not-allowed">
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  value="Online"
+                  disabled
+                />
+                Pay Online (Coming Soon)
               </label>
+
             </div>
           </div>
 
