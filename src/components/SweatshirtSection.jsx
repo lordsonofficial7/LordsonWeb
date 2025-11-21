@@ -151,7 +151,7 @@ export default function SweatshirtSection() {
             {/* Image */}
             <div className="w-full aspect-[3/4] overflow-hidden">
               <img
-                src={product.image}
+                src={product.image_url}
                 alt={product.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />

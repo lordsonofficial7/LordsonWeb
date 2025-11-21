@@ -8,7 +8,7 @@ import SweatshirtSection from "./components/SweatshirtSection";
 import Footer from "./components/Footer";
 import ProductDetail from "./components/page/ProductDetail";
 import CartPage from "./components/page/CartPage";
-import CheckoutPage from "./components/page/CheckoutPage";
+// import CheckoutPage from "./components/page/CheckoutPage";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         {/* 🛍️ Product Detail Page */}
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
+        {/* <Route path="/checkout" element={<CheckoutPage />} /> */}
 
 
       </Routes>

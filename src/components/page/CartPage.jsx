@@ -8,8 +8,9 @@ import { useNavigate } from "react-router-dom"; // ✅ import navigate hook
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
-    const navigate = useNavigate(); // ✅ initialize navigate
+  const navigate = useNavigate(); // ✅ initialize navigate
 
+  console.log(cart);
 
   useEffect(() => {
     setCart(getCart());
@@ -56,6 +57,7 @@ const CartPage = () => {
                     alt={item.title}
                     className="w-16 h-16 rounded-lg object-cover"
                   />
+
                   <div>
                     <p className="font-semibold text-gray-800">{item.title}</p>
                     <p className="text-sm text-gray-500">Size: {item.size}</p>

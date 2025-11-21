@@ -13,6 +13,13 @@ const saveCart = (cart) => {
 // 🔹 Add a product to the cart
 export const addToCart = (product, size, qty) => {
   const cart = getCart();
+
+  // ✅ Correct image selection
+  const image =
+    product.image_url ||
+    product.image ||
+    (product.images?.length > 0 ? product.images[0].image_url : null);
+
   const existingIndex = cart.findIndex(
     (item) => item.id === product.id && item.size === size
   );
@@ -23,11 +30,13 @@ export const addToCart = (product, size, qty) => {
     cart.push({
       id: product.id,
       title: product.title,
-      image: product.image || product.images?.[0]?.image,
       size,
       qty,
       price: parseFloat(product.price),
       final_price: parseFloat(product.final_price),
+
+      // 🔥 Save as `image` (cart standard)
+      image: image
     });
   }
 

@@ -105,6 +105,7 @@ import { Link } from "react-router-dom"; // 👈 Import Link for navigation
 export default function BestSeller() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  console.log(products);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -155,7 +156,7 @@ export default function BestSeller() {
             {/* Image */}
             <div className="w-full aspect-[3/4] overflow-hidden">
               <img
-                src={product.image}
+                src={product.image_url}
                 alt={product.title}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />

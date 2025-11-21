@@ -106,50 +106,50 @@ export const placeCODOrder = async (orderData) => {
   }
 };
 
-// 💳 Create Razorpay Online Order
-export const createRazorpayOrder = async (orderData) => {
-  try {
-    const response = await fetch(`${BASE_URL}/orders/create-razorpay-order/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(orderData),
-    });
+// // 💳 Create Razorpay Online Order
+// export const createRazorpayOrder = async (orderData) => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/orders/create-razorpay-order/`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(orderData),
+//     });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("Razorpay Create Order Error:", errorData);
-      throw new Error(errorData.error || "Failed to create Razorpay order");
-    }
+//     if (!response.ok) {
+//       const errorData = await response.json();
+//       console.error("Razorpay Create Order Error:", errorData);
+//       throw new Error(errorData.error || "Failed to create Razorpay order");
+//     }
 
-    return await response.json();
-  } catch (error) {
-    console.error("Razorpay Order API Error:", error);
-    throw error;
-  }
-};
+//     return await response.json();
+//   } catch (error) {
+//     console.error("Razorpay Order API Error:", error);
+//     throw error;
+//   }
+// };
 
-// ✅ Verify Razorpay Payment after success
-export const verifyRazorpayPayment = async (verifyData) => {
-  try {
-    const response = await fetch(`${BASE_URL}/orders/verify-payment/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(verifyData),
-    });
+// // ✅ Verify Razorpay Payment after success
+// export const verifyRazorpayPayment = async (verifyData) => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/orders/verify-payment/`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(verifyData),
+//     });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("Razorpay Verify Error:", errorData);
-      throw new Error(errorData.error || "Failed to verify payment");
-    }
+//     if (!response.ok) {
+//       const errorData = await response.json();
+//       console.error("Razorpay Verify Error:", errorData);
+//       throw new Error(errorData.error || "Failed to verify payment");
+//     }
 
-    return await response.json();
-  } catch (error) {
-    console.error("Razorpay Verify API Error:", error);
-    throw error;
-  }
-};
+//     return await response.json();
+//   } catch (error) {
+//     console.error("Razorpay Verify API Error:", error);
+//     throw error;
+//   }
+// };
